@@ -40,13 +40,13 @@ public class GryffindorStudent extends HogwartsStudent {
     }
     public void compareHogwarts(GryffindorStudent gryffindorStudent) {
         int ability1 = ability();
-        int ability2 = hogwartsStudent.ability();
+        int ability2 = gryffindorStudent.ability();
         if (ability1 < ability2) {
-            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", getName(), hogwartsStudent.getName(), ability1, ability2);
+            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", getName(), gryffindorStudent.getName(), ability1, ability2);
         } else if (ability2 > ability1) {
-            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", hogwartsStudent.getName(), getName(), ability2, ability1);
+            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability2, ability1);
         } else {
-            System.out.println("Грифиндорец %s такой же, как грифиндорец %s: %d VS %d%n", hogwartsStudent.getName(), getName(), ability1, ability2);
+            System.out.println("Грифиндорец %s такой же, как грифиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability1, ability2);
         }
     }
 }
