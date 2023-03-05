@@ -53,6 +53,7 @@ public class RavenclawStudent extends HogwartsStudent {
     private int ability() {
         return cleverness + wisdom + wit + creativity;
     }
+
     public void compareHogwarts(RavenclawStudent ravenclawStudent) {
         int ability1 = ability();
         int ability2 = ravenclawStudent.ability();
@@ -63,5 +64,10 @@ public class RavenclawStudent extends HogwartsStudent {
         } else {
             System.out.println("Когтевранцы %s такой же, как когтевранцы %s: %d VS %d%n", ravenclawStudent.getName(), getName(), ability1, ability2);
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s; ум: %d; мудрость: %d; сообразительность: %d; творчество: %d", super.toString(), cleverness, wisdom, wit, creativity);
     }
 }

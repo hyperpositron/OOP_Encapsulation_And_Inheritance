@@ -76,5 +76,9 @@ public class SlytherinStudent extends HogwartsStudent {
             System.out.println("Слизеренец %s такой же, как слизеренец %s: %d VS %d%n", slytherinStudent.getName(), getName(), ability1, ability2);
         }
     }
+    @Override
+    public String toString() {
+        return String.format("%s; хитрость : %d; решительность : %d; амбициозность: %d; находчивость: %d; жаждв власти: %d", super.toString(), cunning, determination, ambition, ingenuity, thirstForPower);
+    }
 
 }

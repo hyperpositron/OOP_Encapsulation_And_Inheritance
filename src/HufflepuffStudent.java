@@ -46,11 +46,15 @@ public class HufflepuffStudent extends HogwartsStudent {
         int ability1 = ability();
         int ability2 = hufflepuffStudent.ability();
         if (ability1 < ability2) {
-            System.out.println("Пуффендуйцы %s лучше, чем пуффендуйцы %s: %d VS %d%n", getName(), hufflepuffStudent.getName(), ability1, ability2);
+            System.out.println("Пуффендуйец %s лучше, чем пуффендуйец %s: %d VS %d%n", getName(), hufflepuffStudent.getName(), ability1, ability2);
         } else if (ability2 > ability1) {
-            System.out.println("Пуффендуйцы %s лучше, чем пуффендуйцы %s: %d VS %d%n", hufflepuffStudent.getName(), getName(), ability2, ability1);
+            System.out.println("Пуффендуйец %s лучше, чем пуффендуйец %s: %d VS %d%n", hufflepuffStudent.getName(), getName(), ability2, ability1);
         } else {
-            System.out.println("Пуффендуйцы %s такой же, как пуффендуйцы %s: %d VS %d%n", hufflepuffStudent.getName(), getName(), ability1, ability2);
+            System.out.println("Пуффендуйец %s такой же, как пуффендуйец %s: %d VS %d%n", hufflepuffStudent.getName(), getName(), ability1, ability2);
         }
+    }
+    @Override
+    public String toString() {
+        return String.format("%s; трудолюбие: %d; верность: %d; честность: %d", super.toString(), diligence, loyalty, honesty);
     }
 }

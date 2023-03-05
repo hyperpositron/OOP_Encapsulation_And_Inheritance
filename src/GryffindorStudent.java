@@ -49,4 +49,8 @@ public class GryffindorStudent extends HogwartsStudent {
             System.out.println("Грифиндорец %s такой же, как грифиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability1, ability2);
         }
     }
+    @Override
+    public String toString() {
+        return String.format("%s; благородство: %d; честь: %d; храбрость: %d", super.toString(), nobility, honor, bravery);
+    }
 }
