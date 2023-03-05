@@ -35,22 +35,25 @@ public class GryffindorStudent extends HogwartsStudent {
         this.bravery = bravery;
     }
 
-    public int ability() {
-        return nobility + honor + bravery;
-    }
-    public void compareGryffindor(GryffindorStudent gryffindorStudent) {
+    public void compareGriffindor(GryffindorStudent gryffindorStudent) {
         int ability1 = ability();
         int ability2 = gryffindorStudent.ability();
-        if (ability1 < ability2) {
-            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", getName(), gryffindorStudent.getName(), ability1, ability2);
+        if (ability1 > ability2) {
+            System.out.printf("Гриффиндорец %s лучше, чем гриффиндорец %s: %d VS %d%n", getName(), gryffindorStudent.getName(), ability1, ability2);
         } else if (ability2 > ability1) {
-            System.out.println("Грифиндорец %s лучше, чем грифиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability2, ability1);
+            System.out.printf("Гриффиндорец %s лучше, чем гриффиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability2, ability1);
         } else {
-            System.out.println("Грифиндорец %s такой же, как грифиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability1, ability2);
+            System.out.printf("Гриффиндорец %s такой же, как гриффиндорец %s: %d VS %d%n", gryffindorStudent.getName(), getName(), ability1, ability2);
         }
     }
+
+    private int ability() {
+        return nobility + honor + bravery;
+    }
+
     @Override
     public String toString() {
         return String.format("%s; благородство: %d; честь: %d; храбрость: %d", super.toString(), nobility, honor, bravery);
     }
+
 }

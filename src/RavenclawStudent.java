@@ -1,16 +1,11 @@
 public class RavenclawStudent extends HogwartsStudent {
+
     private int cleverness;
     private int wisdom;
     private int wit;
     private int creativity;
 
-    public RavenclawStudent(String name,
-                            int magic,
-                            int transgression,
-                            int cleverness,
-                            int wisdom,
-                            int wit,
-                            int creativity) {
+    public RavenclawStudent(String name, int magic, int transgression, int cleverness, int wisdom, int wit, int creativity) {
         super(name, magic, transgression);
         this.cleverness = cleverness;
         this.wisdom = wisdom;
@@ -57,12 +52,12 @@ public class RavenclawStudent extends HogwartsStudent {
     public void compareRavenclaw(RavenclawStudent ravenclawStudent) {
         int ability1 = ability();
         int ability2 = ravenclawStudent.ability();
-        if (ability1 < ability2) {
-            System.out.println("Когтевранцы %s лучше, чем когтевранцы %s: %d VS %d%n", getName(), ravenclawStudent.getName(), ability1, ability2);
+        if (ability1 > ability2) {
+            System.out.printf("Когтевранец %s лучше, чем когтевранец %s: %d VS %d%n", getName(), ravenclawStudent.getName(), ability1, ability2);
         } else if (ability2 > ability1) {
-            System.out.println("Когтевранцы %s лучше, чем когтевранцы %s: %d VS %d%n", ravenclawStudent.getName(), getName(), ability2, ability1);
+            System.out.printf("Когтевранец %s лучше, чем когтевранец %s: %d VS %d%n", ravenclawStudent.getName(), getName(), ability2, ability1);
         } else {
-            System.out.println("Когтевранцы %s такой же, как когтевранцы %s: %d VS %d%n", ravenclawStudent.getName(), getName(), ability1, ability2);
+            System.out.printf("Когтевранец %s такой же, как когтевранец %s: %d VS %d%n", ravenclawStudent.getName(), getName(), ability1, ability2);
         }
     }
 
@@ -70,4 +65,5 @@ public class RavenclawStudent extends HogwartsStudent {
     public String toString() {
         return String.format("%s; ум: %d; мудрость: %d; сообразительность: %d; творчество: %d", super.toString(), cleverness, wisdom, wit, creativity);
     }
+
 }

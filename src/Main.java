@@ -1,14 +1,24 @@
 import java.util.Random;
 
 public class Main {
+
     private static final Random RANDOM = new Random();
-    public static void main(String[] args){
-        GryffindorStudent harry = generateGryffindorStudent("Гарри Потер");
+
+    public static void main(String[] args) {
+        GryffindorStudent harry = generateGryffindorStudent("Гарри Поттер");
         GryffindorStudent ron = generateGryffindorStudent("Рон Уизли");
         RavenclawStudent luna = generateRavenclawStudent("Полумна Лавгуд");
         SlytherinStudent draco = generateSlytherinStudent("Драко Малфой");
         HufflepuffStudent cedric = generateHufflepuffStudent("Седрик Диггори");
 
+        harry.print();
+        ron.print();
+        luna.print();
+        draco.print();
+        cedric.print();
+
+        harry.compareHogwarts(draco);
+        harry.compareGriffindor(ron);
     }
 
     private static GryffindorStudent generateGryffindorStudent(String name) {
@@ -21,9 +31,11 @@ public class Main {
                 RANDOM.nextInt(100)
         );
     }
+
     private static RavenclawStudent generateRavenclawStudent(String name) {
         return new RavenclawStudent(
                 name,
+                RANDOM.nextInt(100),
                 RANDOM.nextInt(100),
                 RANDOM.nextInt(100),
                 RANDOM.nextInt(100),
@@ -50,9 +62,10 @@ public class Main {
                 RANDOM.nextInt(100),
                 RANDOM.nextInt(100),
                 RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
                 RANDOM.nextInt(100)
         );
     }
-
 
 }
