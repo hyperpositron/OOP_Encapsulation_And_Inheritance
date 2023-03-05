@@ -65,7 +65,7 @@ public class SlytherinStudent extends HogwartsStudent {
         return cunning + determination + ambition + ingenuity + thirstForPower;
     }
 
-    public void compareHogwarts(SlytherinStudent slytherinStudent) {
+    public void compareSlytherin(SlytherinStudent slytherinStudent) {
         int ability1 = ability();
         int ability2 = slytherinStudent.ability();
         if (ability1 < ability2) {

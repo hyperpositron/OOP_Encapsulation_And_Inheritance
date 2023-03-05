@@ -42,7 +42,7 @@ public class HufflepuffStudent extends HogwartsStudent {
     private int ability() {
         return diligence + loyalty + honesty;
     }
-    public void compareHogwarts(HufflepuffStudent hufflepuffStudent) {
+    public void compareHufflepuff(HufflepuffStudent hufflepuffStudent) {
         int ability1 = ability();
         int ability2 = hufflepuffStudent.ability();
         if (ability1 < ability2) {

@@ -54,7 +54,7 @@ public class RavenclawStudent extends HogwartsStudent {
         return cleverness + wisdom + wit + creativity;
     }
 
-    public void compareHogwarts(RavenclawStudent ravenclawStudent) {
+    public void compareRavenclaw(RavenclawStudent ravenclawStudent) {
         int ability1 = ability();
         int ability2 = ravenclawStudent.ability();
         if (ability1 < ability2) {

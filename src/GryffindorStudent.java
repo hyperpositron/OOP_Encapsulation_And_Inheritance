@@ -38,7 +38,7 @@ public class GryffindorStudent extends HogwartsStudent {
     public int ability() {
         return nobility + honor + bravery;
     }
-    public void compareHogwarts(GryffindorStudent gryffindorStudent) {
+    public void compareGryffindor(GryffindorStudent gryffindorStudent) {
         int ability1 = ability();
         int ability2 = gryffindorStudent.ability();
         if (ability1 < ability2) {

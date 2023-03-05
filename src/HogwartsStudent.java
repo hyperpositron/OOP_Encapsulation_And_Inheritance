@@ -49,6 +49,10 @@ public abstract class HogwartsStudent {
             System.out.println("Студент %s такой же, как студент %s: %d VS %d%n", hogwartsStudent.getName(), getName(), ability1, ability2);
         }
     }
+
+    public void print() {
+        System.out.println(this);
+    }
     @Override
     public String toString() {
         return String.format("Студент %s; сила магии: %d; сила трансгрессии: %d", super.toString(), name, magic, transgression);
